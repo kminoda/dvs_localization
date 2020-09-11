@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="dvs_vlc" type="dvs_vlc_node.py" name="dvs_vlc" output='screen'>
+        <!-- <remap from="odom" to="vins_estimator/camera_pose"/>
+        <remap from="euler" to="vins_estimator/euler"/> -->
+    </node>
+</launch>

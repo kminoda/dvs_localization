@@ -1,0 +1,9 @@
+{
+    "debug": false,
+    "method": "xyzyaw",
+    "t_at": 0.5,
+    "freq": 100,
+    "n_led": 2,
+    "thres_detect_led": 100,
+    "led_pos": [[-5.1, -1.0, 1.0], [0, 0, 0]]
+}
