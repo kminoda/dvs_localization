@@ -72,17 +72,8 @@ class DVSLocalization {
         std::vector<Event> event_list;
         std::vector<double> event_time_list;
         std::vector<std::vector<double>> led_pos_list = std::vector<std::vector<double>>(n_led, std::vector<double>(2));
-        // std::vector<std::vector<double>> led_edges_list = std::vector<std::vector<double>>(n_led);
-        // std::vector<std::vector<bool>> led_bits_list = std::vector<std::vector<bool>>(n_led);
-        // std::vector<std::vector<int>> vlc_sync_idx_list = std::vector<std::vector<int>>(n_led);
-        // std::vector<std::vector<bool>> vlc_msg_list = std::vector<std::vector<bool>>(n_led, std::vector<bool>(message_length));
         Eigen::MatrixXd K = Eigen::MatrixXd::Identity(3, 3);
-        // int num_hist_per_sec = 2001;
         std::vector<double> dist = std::vector<double>(5);
-        // double dt_for_hist = 1.0/num_hist_per_sec;
-        // std::vector<double> time_bins = std::vector<double>(int(num_hist_per_sec * time_len));
-        // std::vector<std::vector<int>> hist_data_pos = std::vector<std::vector<int>>(n_led, std::vector<int>(int(num_hist_per_sec * time_len)));
-        // std::vector<std::vector<int>> hist_data_neg = std::vector<std::vector<int>>(n_led, std::vector<int>(int(num_hist_per_sec * time_len)));
         std::vector<std::vector<double>> ps = std::vector<std::vector<double>>(n_led);
         std::vector<std::vector<double>> ps_und = std::vector<std::vector<double>>(n_led);
         std::vector<std::vector<double>> Pws = std::vector<std::vector<double>>(n_led, std::vector<double>(3));
@@ -148,10 +139,6 @@ void DVSLocalization::initialize()
 
     // encode_msg
     led_pos_list = std::vector<std::vector<double>>(n_led, std::vector<double>(2));
-    // led_edges_list[0].clear(); led_edges_list[1].clear();  //  = std::vector<std::vector<double>>(n_led);
-    // led_bits_list[0].clear(); led_bits_list[1].clear(); //  = std::vector<std::vector<bool>>(n_led);
-    // vlc_sync_idx_list[0].clear(); vlc_sync_idx_list[1].clear();  //  = std::vector<std::vector<int>>(n_led);
-    // vlc_msg_list = std::vector<std::vector<bool>>(n_led, std::vector<bool>(message_length));
     ps = std::vector<std::vector<double>>(n_led);
 }
 

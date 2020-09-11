@@ -1,0 +1,4 @@
+*.bag
+*.pyc
+prophesee/
+./ipynb_checkpoints
